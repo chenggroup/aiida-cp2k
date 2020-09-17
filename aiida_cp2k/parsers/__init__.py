@@ -41,7 +41,7 @@ class Cp2kBaseParser(Parser):
                 self.out('output_structure', returned)
             else:  # in case this is an error code
                 return returned
-        except exceptions.NotExistent:
+        except Exception:
             pass
 
         return ExitCode(0)
